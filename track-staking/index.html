@@ -8,58 +8,102 @@
 <meta name="description" content="Learn how to track crypto staking correctly. Separate spot and staked balances, calculate real cost basis and avoid distorted portfolio metrics.">
 <link rel="canonical" href="https://www.mycryptoplanner.com/track-staking/">
 
-<link rel="stylesheet" href="../styles.css">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon.png">
+<meta name="theme-color" content="#0b1f3a">
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
 </head>
 
 <body>
 
 <header class="topbar">
-<div class="container topbar-inner">
-<a class="brand" href="/"><img src="../assets/coresystems.png" alt="CoreSystems"></a>
-</div>
+  <div class="container topbar-inner">
+    <a class="brand" href="/" aria-label="Home">
+      <img src="/assets/coresystems.png" alt="CoreSystems logo">
+    </a>
+
+    <nav class="nav" aria-label="Main navigation">
+      <a href="/#products">Products</a>
+      <a href="/#compare">Compare</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/#screens">Screenshots</a>
+      <a href="/#why">Why not</a>
+      <a href="/#where">Where to buy</a>
+      <a href="/#guides">Guides</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+
+    <div class="top-ctas">
+      <a class="btn btn-ghost" href="/#pricing">View pricing</a>
+      <a class="btn btn-primary" href="/#pricing">Get CORE</a>
+    </div>
+  </div>
 </header>
 
 <section class="section">
-<div class="container reveal">
+  <div class="container reveal">
 
-<h1 class="h2" style="font-size:42px;">How to Track Crypto Staking Properly</h1>
+    <h1 class="h2" style="font-size:42px;">How to Track Crypto Staking Properly</h1>
 
-<div class="boxframe" style="margin-top:18px;padding:18px;">
-<h2 style="margin-top:0;">Why Staking Breaks Most Trackers</h2>
-<ul class="ul">
-<li>Staking rewards treated as buys</li>
-<li>Spot and staked mixed together</li>
-<li>Distorted PnL calculations</li>
-</ul>
-</div>
+    <div class="boxframe" style="margin-top:18px;padding:18px;">
+      <h2 style="margin-top:0;">Why Staking Breaks Most Trackers</h2>
+      <ul class="ul">
+        <li>Staking rewards treated as buys</li>
+        <li>Spot and staked mixed together</li>
+        <li>Distorted PnL calculations</li>
+      </ul>
+    </div>
 
-<div class="boxframe" style="margin-top:22px;padding:22px;">
-<h2 style="margin-top:0;">Correct Structure</h2>
-<ol>
-<li>Track spot balance separately.</li>
-<li>Track staking balance separately.</li>
-<li>Sum both into total holdings.</li>
-<li>Keep cost basis logic intact.</li>
-</ol>
-</div>
+    <div class="boxframe" style="margin-top:22px;padding:22px;">
+      <h2 style="margin-top:0;">Correct Structure</h2>
+      <ol>
+        <li>Track spot balance separately.</li>
+        <li>Track staking balance separately.</li>
+        <li>Sum both into total holdings.</li>
+        <li>Keep cost basis logic intact.</li>
+      </ol>
+      <p class="p" style="margin-top:12px;">
+        Related guide: <a href="/google-sheets-crypto-tracker/">Google Sheets crypto tracker</a>.
+      </p>
+    </div>
 
-<div class="boxframe boxframe-price" style="margin-top:22px;padding:22px;">
-<h2 style="margin-top:0;">Want Staking Done Right?</h2>
-<p class="p">
-Crypto Planner CORE separates spot and staking cleanly
-and keeps performance metrics stable.
-</p>
-<a class="btn btn-primary" href="/#pricing">Get CORE</a>
-</div>
+    <div class="boxframe boxframe-price" style="margin-top:22px;padding:22px;">
+      <h2 style="margin-top:0;">Want Staking Done Right?</h2>
+      <p class="p">
+        Crypto Planner CORE separates spot and staking cleanly and keeps performance metrics stable.
+      </p>
+      <div class="hr"></div>
+      <a class="btn btn-primary" href="/#pricing">Get CORE</a>
+      <a class="btn btn-ghost" href="/" style="margin-left:10px;">← Back to home</a>
+    </div>
 
-</div>
+  </div>
 </section>
 
 <footer class="footer">
-<div class="container footer-inner">
-<img src="../assets/coresystems.png" alt="CoreSystems">
-</div>
+  <div class="container footer-inner">
+    <div style="display:flex; gap:10px; align-items:center;">
+      <img src="/assets/coresystems.png" alt="CoreSystems">
+      <div>© 2026 CoreSystems. All rights reserved.</div>
+    </div>
+  </div>
 </footer>
+
+<script>
+(function(){
+  const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const els = Array.from(document.querySelectorAll('.reveal'));
+  if (prefersReduced){ els.forEach(el => el.classList.add('is-in')); return; }
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('is-in'); io.unobserve(e.target); } });
+  }, {threshold: 0.12});
+  els.forEach(el=>io.observe(el));
+})();
+</script>
 
 </body>
 </html>
