@@ -790,3 +790,35 @@ body.no-scroll{overflow:hidden;}
   .gallery-nav{width:38px;height:38px;font-size:28px;border-radius:12px;}
   #galleryImg{max-height: 60vh;}
 }
+/* === Brand link styling (override default purple) === */
+
+a {
+  color: #1fa2ff;
+  text-decoration: none;
+  transition: color .2s ease;
+}
+
+a:hover {
+  color: #38cfff;
+  text-decoration: underline;
+}
+
+.footer a {
+  color: #9bb3c9;
+}
+
+.footer a:hover {
+  color: #ffffff;
+}
+
+.contact-note a,
+.p a,
+.disclaimer a {
+  color: #1fa2ff;
+}
+
+.contact-note a:hover,
+.p a:hover,
+.disclaimer a:hover {
+  color: #38cfff;
+}
