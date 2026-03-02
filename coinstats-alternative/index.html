@@ -14,7 +14,7 @@
   <meta name="theme-color" content="#0b1f3a">
 
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="/styles.css">
 </head>
 
 <body>
@@ -22,7 +22,7 @@
 <header class="topbar">
   <div class="container topbar-inner">
     <a class="brand" href="/" aria-label="Home">
-      <img src="../assets/coresystems.png" alt="CoreSystems logo">
+      <img src="/assets/coresystems.png" alt="CoreSystems logo">
     </a>
 
     <nav class="nav" aria-label="Main navigation">
@@ -30,6 +30,9 @@
       <a href="/#compare">Compare</a>
       <a href="/#pricing">Pricing</a>
       <a href="/#screens">Screenshots</a>
+      <a href="/#why">Why not</a>
+      <a href="/#where">Where to buy</a>
+      <a href="/#guides">Guides</a>
       <a href="/#faq">FAQ</a>
       <a href="/#contact">Contact</a>
     </nav>
@@ -46,12 +49,9 @@
 
     <h1 class="h2" style="font-size:42px;">CoinStats Alternative (2026)</h1>
 
-    <!-- FEATURED SNIPPET BLOCK -->
     <div class="boxframe" style="margin-top:18px; padding:18px;">
       <h2 style="margin-top:0;">What is the best CoinStats alternative?</h2>
-      <p class="p">
-        The best CoinStats alternative depends on your goal:
-      </p>
+      <p class="p">The best CoinStats alternative depends on your goal:</p>
       <ul class="ul">
         <li>If you want to <strong>buy and invest</strong> — use an exchange app like Coinbase, Kraken, or Binance.</li>
         <li>If you want <strong>portfolio clarity</strong> — use a structured tracker built for analytics.</li>
@@ -76,9 +76,7 @@
       <h2 style="margin-top:0;">Two Types of Alternatives (Don’t Confuse Them)</h2>
 
       <h3>1) Apps for Buying & Investing</h3>
-      <p class="p">
-        These are execution platforms — ideal if your goal is to buy, sell, stake or invest directly.
-      </p>
+      <p class="p">These are execution platforms — ideal if your goal is to buy, sell, stake or invest directly.</p>
       <ul class="ul">
         <li><strong>Coinbase</strong> — beginner-friendly interface.</li>
         <li><strong>Kraken</strong> — security-focused exchange.</li>
@@ -86,9 +84,7 @@
       </ul>
 
       <h3 style="margin-top:18px;">2) Portfolio Tracking Tools</h3>
-      <p class="p">
-        These focus on analytics and reporting rather than trading.
-      </p>
+      <p class="p">These focus on analytics and reporting rather than trading.</p>
       <ul class="ul">
         <li><strong>Delta</strong> — mobile-first tracking.</li>
         <li><strong>Koinly / CoinTracker</strong> — import-heavy tracking.</li>
@@ -104,21 +100,14 @@
         <li>Calculation logic is hidden.</li>
         <li>Your workflow depends on their platform.</li>
       </ul>
-
+      <p class="p">A structured spreadsheet tracker gives you transparency, ownership, and long-term stability.</p>
       <p class="p">
-        A structured spreadsheet tracker gives you transparency, ownership, and long-term stability.
-      </p>
-
-      <p class="p">
-        You can also read our full guide on building a 
-        <a href="/google-sheets-crypto-tracker/">Google Sheets crypto tracker</a>
-        for a deeper breakdown of structure and price automation.
+        Read: <a href="/google-sheets-crypto-tracker/">Google Sheets crypto tracker</a>.
       </p>
     </div>
 
     <div class="boxframe boxframe-price" style="margin-top:22px; padding:22px;">
       <h2 style="margin-top:0;">No-Subscription Alternative: Crypto Planner CORE</h2>
-
       <ul class="ul">
         <li>Spot + staking tracking</li>
         <li>Automatic prices with manual fallback</li>
@@ -126,13 +115,9 @@
         <li>Clear dashboard</li>
         <li>One-time purchase</li>
       </ul>
-
       <div class="hr"></div>
       <a class="btn btn-primary" href="/#pricing">Get CORE ($29)</a>
-    </div>
-
-    <div style="margin-top:18px;">
-      <a class="btn btn-ghost" href="/">← Back to home</a>
+      <a class="btn btn-ghost" href="/" style="margin-left:10px;">← Back to home</a>
     </div>
 
   </div>
@@ -141,51 +126,17 @@
 <footer class="footer">
   <div class="container footer-inner">
     <div style="display:flex; gap:10px; align-items:center;">
-      <img src="../assets/coresystems.png" alt="CoreSystems">
+      <img src="/assets/coresystems.png" alt="CoreSystems">
       <div>© 2026 CoreSystems. All rights reserved.</div>
     </div>
   </div>
 </footer>
 
-<!-- FAQ SCHEMA -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Is CoinStats worth it?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "CoinStats is convenient for portfolio tracking, but it often requires a subscription. Investors seeking transparency and ownership may prefer a structured spreadsheet-based tracker."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the best free CoinStats alternative?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Free alternatives include CoinGecko and CoinMarketCap portfolio tools. They are suitable for monitoring but offer limited workflow control."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Which alternative lets me buy crypto?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "To buy crypto directly, use an exchange app such as Coinbase, Kraken, or Binance."
-      }
-    }
-  ]
-}
-</script>
-
 <script>
 (function(){
   const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const els = Array.from(document.querySelectorAll('.reveal'));
-  if (prefersReduced){ els.forEach(el => el.classList.add('is-in'); return; }
+  if (prefersReduced){ els.forEach(el => el.classList.add('is-in')); return; }
   const io = new IntersectionObserver((entries)=>{
     entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('is-in'); io.unobserve(e.target); } });
   }, {threshold: 0.12});
