@@ -1,113 +1,414 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Best CoinStats Alternative (No Subscription) — Crypto Planner</title>
-  <meta name="description" content="Looking for a CoinStats alternative without subscriptions? Crypto Planner is a clean Google Sheets tracker with spot + staking, price updates and a stable workflow."/>
+  <title>Best CoinStats Alternative (2026) — Track & Invest Without Subscriptions</title>
+  <meta name="description" content="Looking for a CoinStats alternative? Compare portfolio trackers and investing apps, see what’s best for your use case, and track spot + staking with full ownership (no subscription)." />
+  <meta name="robots" content="index,follow" />
 
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png">
-  <meta name="theme-color" content="#0b1f3a">
+  <!-- OPTIONAL but recommended: replace YOURDOMAIN with your real domain -->
+  <link rel="canonical" href="https://YOURDOMAIN.com/coinstats-alternative/" />
 
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../styles.css">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Best CoinStats Alternative (2026) — Track & Invest Without Subscriptions" />
+  <meta property="og:description" content="Compare CoinStats alternatives: trackers vs investing apps. See which option fits you and avoid subscriptions with a clean Sheets-based tracker." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://YOURDOMAIN.com/coinstats-alternative/" />
+
+  <link rel="stylesheet" href="/styles.css" />
+
+  <style>
+    /* Local article readability only — keeps your global style intact */
+    .article-wrap{max-width: 980px; margin: 0 auto; padding: 32px 18px 64px;}
+    .article-hero{margin: 14px 0 18px;}
+    .kicker{opacity:.85; letter-spacing:.08em; text-transform: uppercase; font-size: 12px;}
+    .article-wrap h1{margin: 10px 0 10px; line-height: 1.1;}
+    .meta{opacity:.8; font-size: 14px; margin-top: 8px;}
+    .toc{margin: 18px 0 26px; padding: 16px 16px; border-radius: 16px;}
+    .toc a{display:block; padding: 6px 0; text-decoration: none;}
+    .toc a:hover{text-decoration: underline;}
+    .lead{font-size: 18px; line-height: 1.6; margin: 14px 0 18px;}
+    .box{padding: 18px; border-radius: 18px; margin: 18px 0;}
+    .cta-row{display:flex; flex-wrap:wrap; gap:10px; margin-top: 12px;}
+    .cta-row a{display:inline-flex; align-items:center; gap:8px; padding: 10px 14px; border-radius: 999px; text-decoration:none;}
+    .cta-primary{font-weight:700;}
+    .badge{display:inline-block; padding: 6px 10px; border-radius: 999px; font-size: 12px; opacity:.9;}
+    .mini{font-size: 14px; opacity:.9;}
+    table{width:100%; border-collapse: collapse; margin: 10px 0 18px; overflow:hidden; border-radius: 16px;}
+    th, td{padding: 12px 12px; vertical-align: top;}
+    th{text-align:left;}
+    .proscons{display:grid; grid-template-columns: 1fr; gap: 10px;}
+    @media(min-width:900px){ .proscons{grid-template-columns: 1fr 1fr;} }
+    .faq details{margin: 10px 0; border-radius: 16px; padding: 12px 14px;}
+    .faq summary{cursor:pointer; font-weight:700;}
+    .note{font-size: 13px; opacity:.85;}
+  </style>
+
+  <!-- Article schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"Best CoinStats Alternative (2026) — Track & Invest Without Subscriptions",
+    "description":"Compare CoinStats alternatives: portfolio trackers vs investing apps. Learn what fits your needs and how to track spot + staking without monthly fees.",
+    "author":{"@type":"Organization","name":"CoreSystems"},
+    "publisher":{"@type":"Organization","name":"CoreSystems"},
+    "mainEntityOfPage":{"@type":"WebPage","@id":"https://YOURDOMAIN.com/coinstats-alternative/"}
+  }
+  </script>
+
+  <!-- FAQ schema (snippet-friendly) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Is CoinStats worth it?",
+        "acceptedAnswer":{"@type":"Answer","text":"CoinStats can be worth it if you want automatic syncing across many exchanges and you’re fine with subscriptions. If you prefer ownership, customization, and no monthly fees, a spreadsheet-based tracker can be a better long-term option."}
+      },
+      {
+        "@type":"Question",
+        "name":"What is the best free CoinStats alternative?",
+        "acceptedAnswer":{"@type":"Answer","text":"Free options include basic portfolio features in CoinGecko or CoinMarketCap. They’re useful for monitoring but often lack clean cost-basis workflow and long-term portfolio control compared to a dedicated tracker."}
+      },
+      {
+        "@type":"Question",
+        "name":"Which CoinStats alternative lets me buy crypto?",
+        "acceptedAnswer":{"@type":"Answer","text":"If your goal is buying and investing, use investing apps/exchanges like Coinbase, Kraken, or Binance. They are built for execution (buy/sell/stake) rather than deep portfolio analytics."}
+      },
+      {
+        "@type":"Question",
+        "name":"Do I need API keys to track my portfolio?",
+        "acceptedAnswer":{"@type":"Answer","text":"No. API keys are optional. You can track holdings manually or by importing trades. A tracker that doesn’t require API keys reduces risk and gives you full control over your data."}
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
 
-<header class="topbar">
-  <div class="container topbar-inner">
-    <a class="brand" href="/" aria-label="Home">
-      <img src="../assets/coresystems.png" alt="CoreSystems logo">
-    </a>
+  <!-- Optional: keep your existing header/nav from landing if you have one globally.
+       If your landing has a header inside index.html only, this page will still look fine. -->
 
-    <nav class="nav" aria-label="Main navigation">
-      <a href="/#products">Products</a>
-      <a href="/#compare">Compare</a>
-      <a href="/#pricing">Pricing</a>
-      <a href="/#screens">Screenshots</a>
-      <a href="/#faq">FAQ</a>
-      <a href="/#contact">Contact</a>
-    </nav>
+  <main class="article-wrap">
 
-    <div class="top-ctas">
-      <a class="btn btn-ghost" href="/#pricing">View pricing</a>
-      <a class="btn btn-primary" href="/#pricing">Get CORE</a>
-    </div>
-  </div>
-</header>
+    <header class="article-hero">
+      <div class="kicker">Crypto Planner Blog</div>
+      <h1>Best CoinStats Alternative (2026): Track & Invest Without Subscriptions</h1>
+      <p class="meta">Looking for a CoinStats alternative? This guide separates <strong>trackers</strong> from <strong>investing apps</strong> and shows the cleanest path to portfolio clarity.</p>
+    </header>
 
-<section class="section">
-  <div class="container reveal">
-    <h1 class="h2" style="font-size:42px;">CoinStats alternative (without subscription)</h1>
-    <p class="p" style="max-width:900px;">
-      If you want clarity, ownership, and a workflow you can audit — Crypto Planner CORE is built as a Google Sheets template,
-      with spot + staking tracking, automatic price updates, and protected calculations.
+    <p class="lead">
+      Most people searching “CoinStats alternative” fall into one of two camps:
+      <strong>(1)</strong> you want a better portfolio tracker, or <strong>(2)</strong> you want an app that lets you buy & invest on mobile.
+      This page covers both — and then points you to the most stable setup for long-term tracking: <strong>your own portfolio system</strong>, not another subscription.
     </p>
 
-    <div class="pricing-grid" style="margin-top:22px;">
-      <div class="pricebox boxframe">
-        <h3>What people dislike about CoinStats</h3>
-        <ul class="ul">
-          <li>Subscription upgrades over time</li>
-          <li>Limited transparency (black-box calculations)</li>
-          <li>Workflow depends on a SaaS account</li>
-        </ul>
+    <section class="box toc boxframe">
+      <div class="badge">Quick navigation</div>
+      <div style="margin-top:10px">
+        <a href="#why-alternative">Why people switch</a>
+        <a href="#two-types">Two types of alternatives</a>
+        <a href="#investing-apps">Apps to buy & invest (mobile)</a>
+        <a href="#trackers">Portfolio trackers (analytics)</a>
+        <a href="#comparison">Comparison table</a>
+        <a href="#best-choice">Which one is best for you?</a>
+        <a href="#faq">FAQ</a>
       </div>
+    </section>
 
-      <div class="pricebox boxframe boxframe-price">
-        <h3>Crypto Planner CORE fixes that</h3>
-        <ul class="ul">
-          <li>One-time purchase (no subscription)</li>
-          <li>Your copy lives in your Google Drive</li>
-          <li>Transparent formulas + stable structure</li>
-          <li>Auto prices + manual fallback</li>
-        </ul>
-
-        <div class="hr"></div>
-
-        <a class="btn btn-primary" href="/#pricing">Buy CORE ($29)</a>
-      </div>
-    </div>
-
-    <div class="boxframe" style="margin-top:22px; padding:18px;">
-      <h3 style="margin-top:0;">Quick comparison</h3>
-      <p class="p" style="margin-bottom:0;">
-        <b>CoinStats</b> = convenient SaaS, but subscription + platform dependency.<br>
-        <b>Crypto Planner</b> = simple Sheets workflow, ownership, and auditability.
+    <section id="why-alternative">
+      <h2>Why people look for a CoinStats alternative</h2>
+      <p>
+        CoinStats is popular because it’s convenient: connect exchanges/wallets, see a dashboard, track performance.
+        But many users switch when one of these becomes a dealbreaker:
       </p>
-    </div>
+      <ul>
+        <li><strong>Subscriptions</strong> — paying monthly for features you only need for portfolio tracking.</li>
+        <li><strong>Sync issues</strong> — mismatched balances, missing staking, delayed updates.</li>
+        <li><strong>Limited control</strong> — you can’t fully customize logic, categories, cost basis rules.</li>
+        <li><strong>Data ownership</strong> — your tracking depends on a platform and its pricing/limits.</li>
+      </ul>
 
-    <div style="margin-top:18px;">
-      <a class="btn btn-ghost" href="/">← Back to home</a>
-    </div>
-  </div>
-</section>
+      <div class="box boxframe">
+        <div class="badge">If you want the short answer</div>
+        <p style="margin:10px 0 0">
+          If your goal is <strong>buying & investing</strong>, use an investing app (exchange).
+          If your goal is <strong>clean portfolio tracking</strong>, use a dedicated tracker — or better: a tracker you own.
+        </p>
+        <div class="cta-row">
+          <a class="cta-primary boxframe" href="/#pricing">See Crypto Planner CORE</a>
+          <a class="boxframe" href="/#where-to-buy">Where to buy</a>
+        </div>
+        <div class="note" style="margin-top:10px">
+          Tip: Keep “execution” (buy/sell) separate from “analytics” (tracking). You’ll get fewer errors and more clarity.
+        </div>
+      </div>
+    </section>
 
-<footer class="footer">
-  <div class="container footer-inner">
-    <div style="display:flex; gap:10px; align-items:center;">
-      <img src="../assets/coresystems.png" alt="CoreSystems">
-      <div>© 2026 CoreSystems. All rights reserved.</div>
-    </div>
-  </div>
-</footer>
+    <section id="two-types">
+      <h2>Two types of CoinStats alternatives</h2>
+      <div class="proscons">
+        <div class="box boxframe">
+          <h3>1) Investing apps (buy & invest)</h3>
+          <p class="mini">Best when you want: buy/sell, recurring buys, staking, earn products, fast execution.</p>
+          <ul>
+            <li>Mobile-first UX</li>
+            <li>Built for trading & investing</li>
+            <li>Portfolio view is usually “good enough” — not perfect</li>
+          </ul>
+        </div>
+        <div class="box boxframe">
+          <h3>2) Portfolio trackers (analytics)</h3>
+          <p class="mini">Best when you want: cost basis, PnL accuracy, allocation, clean reporting.</p>
+          <ul>
+            <li>Better performance analytics</li>
+            <li>Often requires syncing/import</li>
+            <li>Still frequently subscription-based</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-<script>
-/* Reveal on scroll */
-(function(){
-  const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const els = Array.from(document.querySelectorAll('.reveal'));
-  if (prefersReduced){ els.forEach(el => el.classList.add('is-in')); return; }
-  const io = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('is-in'); io.unobserve(e.target); } });
-  }, {threshold: 0.12});
-  els.forEach(el=>io.observe(el));
-})();
-</script>
+    <section id="investing-apps">
+      <h2>CoinStats alternatives that let you buy & invest crypto (mobile apps)</h2>
+      <p>
+        If Google shows you “apps to invest” in the top results — that’s a strong signal: many people actually want
+        <strong>execution</strong>, not just tracking.
+      </p>
+
+      <div class="box boxframe">
+        <h3>Best for simplicity: Coinbase</h3>
+        <p class="mini">Clean onboarding, beginner-friendly, strong compliance. Best when you want the simplest investing UX.</p>
+      </div>
+
+      <div class="box boxframe">
+        <h3>Best for features: Binance</h3>
+        <p class="mini">Huge asset coverage, lots of investing products, advanced trading tools. Best when you want options and low fees.</p>
+      </div>
+
+      <div class="box boxframe">
+        <h3>Best for security-first investing: Kraken</h3>
+        <p class="mini">Strong reputation, stable platform. Best when you want a conservative, robust exchange experience.</p>
+      </div>
+
+      <div class="box boxframe">
+        <div class="badge">Important</div>
+        <p style="margin:10px 0 0">
+          Investing apps are great for buying and staking — but they are not designed to be your long-term analytics engine.
+          If you want accurate portfolio clarity, you still need a dedicated tracker.
+        </p>
+        <div class="cta-row">
+          <a class="cta-primary boxframe" href="/#pricing">Track your portfolio without subscriptions →</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="trackers">
+      <h2>CoinStats alternatives for portfolio tracking (analytics)</h2>
+      <p>
+        These options focus more on tracking and reporting than on execution:
+      </p>
+
+      <div class="box boxframe">
+        <h3>Delta</h3>
+        <p class="mini">Strong mobile tracker experience, alerts, good UI. Often still pushes you toward premium features.</p>
+      </div>
+
+      <div class="box boxframe">
+        <h3>Koinly / CoinTracker</h3>
+        <p class="mini">Great for imports and reporting workflows. Often used for tax contexts; can be heavy if you just want clarity.</p>
+      </div>
+
+      <div class="box boxframe">
+        <h3>CoinGecko / CoinMarketCap portfolios</h3>
+        <p class="mini">Good free monitoring. Limited depth for cost basis and long-term portfolio control.</p>
+      </div>
+
+      <div class="box boxframe">
+        <h3>The “ownership” option: a tracker you own (Google Sheets)</h3>
+        <p class="mini">
+          If you want maximum control, privacy, and no subscriptions, a structured portfolio tracker in Google Sheets
+          can outperform apps — because you control logic, categories, and data.
+        </p>
+        <div class="cta-row">
+          <a class="cta-primary boxframe" href="/#pricing">Crypto Planner CORE: see how it works</a>
+          <a class="boxframe" href="/#screenshots">View screenshots</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="comparison">
+      <h2>Comparison: CoinStats vs alternatives (trackers & investing apps)</h2>
+
+      <table class="boxframe">
+        <thead>
+          <tr>
+            <th>Option</th>
+            <th>Best for</th>
+            <th>Trade / Buy</th>
+            <th>Analytics depth</th>
+            <th>Ownership</th>
+            <th>Typical model</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>CoinStats</strong></td>
+            <td>Convenient tracking + integrations</td>
+            <td>Sometimes (depends)</td>
+            <td>Medium</td>
+            <td>Platform-based</td>
+            <td>Subscription</td>
+          </tr>
+          <tr>
+            <td><strong>Coinbase / Binance / Kraken</strong></td>
+            <td>Buying, investing, staking</td>
+            <td><strong>Yes</strong></td>
+            <td>Low–Medium</td>
+            <td>Platform-based</td>
+            <td>Fees (+ optional premium)</td>
+          </tr>
+          <tr>
+            <td><strong>Delta</strong></td>
+            <td>Mobile portfolio tracking</td>
+            <td>No</td>
+            <td>Medium</td>
+            <td>Platform-based</td>
+            <td>Freemium / premium</td>
+          </tr>
+          <tr>
+            <td><strong>Koinly / CoinTracker</strong></td>
+            <td>Imports & reporting</td>
+            <td>No</td>
+            <td>High (reporting)</td>
+            <td>Platform-based</td>
+            <td>Paid tiers</td>
+          </tr>
+          <tr>
+            <td><strong>Crypto Planner CORE (Sheets)</strong></td>
+            <td>Clear long-term portfolio tracking</td>
+            <td>No</td>
+            <td><strong>High (for CORE scope)</strong></td>
+            <td><strong>You own the file</strong></td>
+            <td><strong>One-time purchase</strong></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="box boxframe">
+        <div class="badge">Bottom line</div>
+        <p style="margin:10px 0 0">
+          If you want to <strong>buy crypto</strong>, choose an investing app.
+          If you want to <strong>understand your portfolio</strong>, use a tracker built for clarity — ideally one you own.
+        </p>
+        <div class="cta-row">
+          <a class="cta-primary boxframe" href="/#pricing">Get Crypto Planner CORE →</a>
+          <a class="boxframe" href="/#why-not-coinstats">Why not CoinStats?</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="best-choice">
+      <h2>Which CoinStats alternative is best for you?</h2>
+
+      <div class="proscons">
+        <div class="box boxframe">
+          <h3>You should pick an investing app if…</h3>
+          <ul>
+            <li>You want to buy/sell directly on your phone</li>
+            <li>You want staking/earn products inside one platform</li>
+            <li>You don’t care about deep cost basis logic</li>
+          </ul>
+          <p class="note">Use: Coinbase / Binance / Kraken (execution first).</p>
+        </div>
+
+        <div class="box boxframe">
+          <h3>You should pick a tracker you own if…</h3>
+          <ul>
+            <li>You want clean cost basis + PnL</li>
+            <li>You want spot + staking in one view</li>
+            <li>You’re done with subscriptions</li>
+            <li>You want a system you can customize</li>
+          </ul>
+          <div class="cta-row">
+            <a class="cta-primary boxframe" href="/#pricing">Crypto Planner CORE (one-time purchase)</a>
+            <a class="boxframe" href="/#faq">See CORE FAQ</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="faq">
+      <h2>FAQ</h2>
+
+      <details class="boxframe">
+        <summary>Is CoinStats worth it?</summary>
+        <p>
+          It can be worth it if you rely on automatic syncing across many exchanges and don’t mind subscriptions.
+          If you want long-term clarity with ownership and customization, a spreadsheet-based tracker is often the smarter move.
+        </p>
+      </details>
+
+      <details class="boxframe">
+        <summary>What is the best free CoinStats alternative?</summary>
+        <p>
+          CoinGecko and CoinMarketCap offer basic portfolio tracking for free. They’re good for monitoring,
+          but they typically don’t provide a clean cost-basis workflow or structured long-term portfolio system.
+        </p>
+      </details>
+
+      <details class="boxframe">
+        <summary>Which CoinStats alternative lets me buy crypto?</summary>
+        <p>
+          If you want to buy/invest, you’re looking for an exchange app (e.g., Coinbase, Binance, Kraken).
+          Those are execution tools. For analytics and portfolio clarity, use a dedicated tracker alongside them.
+        </p>
+      </details>
+
+      <details class="boxframe">
+        <summary>Do I need API keys to track my portfolio?</summary>
+        <p>
+          No. API keys are optional. A tracker that works without API keys reduces risk and gives you full control.
+          Crypto Planner CORE is designed to be usable without any exchange API connection.
+        </p>
+      </details>
+
+      <details class="boxframe">
+        <summary>How does Crypto Planner CORE replace CoinStats?</summary>
+        <p>
+          CORE focuses on the essentials: spot + staking holdings, automatic price updates, portfolio value, PnL and PnL %,
+          and a clean dashboard — with the key difference that you own the file and avoid subscriptions.
+        </p>
+        <div class="cta-row">
+          <a class="cta-primary boxframe" href="/#pricing">See CORE pricing →</a>
+          <a class="boxframe" href="/#screenshots">View CORE screenshots</a>
+        </div>
+      </details>
+
+      <p class="note">
+        Note: This article is educational and not financial advice. Always evaluate tools and platforms based on your region and risk tolerance.
+      </p>
+    </section>
+
+    <section class="box boxframe" style="margin-top:26px">
+      <div class="badge">Next steps</div>
+      <p style="margin:10px 0 0">
+        If you came here to escape subscriptions and get portfolio clarity, start with the simplest system:
+        <strong>Crypto Planner CORE</strong> — clean tracking, spot + staking, and full ownership.
+      </p>
+      <div class="cta-row">
+        <a class="cta-primary boxframe" href="/#pricing">Get Crypto Planner CORE →</a>
+        <a class="boxframe" href="/">Back to homepage</a>
+      </div>
+    </section>
+
+  </main>
 
 </body>
 </html>
