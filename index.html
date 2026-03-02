@@ -4,8 +4,27 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-  <title>Crypto Planner — Product Line</title>
-  <meta name="description" content="Crypto Planner by CoreSystems — clean Google Sheets crypto tracking tool. Spot + staking, price updater, dashboard, protected calculations."/>
+  <!-- PRIMARY SEO -->
+  <title>Crypto Portfolio Tracker (No Subscription) — Crypto Planner CORE</title>
+  <meta name="description" content="Track your crypto portfolio in Google Sheets — spot + staking, real PnL, price updater with manual fallback. One-time purchase. No subscription."/>
+  <link rel="canonical" href="https://mycryptoplanner.com/"/>
+
+  <!-- ROBOTS -->
+  <meta name="robots" content="index,follow"/>
+
+  <!-- OPEN GRAPH / SOCIAL -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Crypto Planner"/>
+  <meta property="og:title" content="Crypto Portfolio Tracker (No Subscription) — Crypto Planner CORE"/>
+  <meta property="og:description" content="A clean Google Sheets crypto portfolio tracker: spot + staking, real PnL, price updater + manual fallback. One-time purchase."/>
+  <meta property="og:url" content="https://mycryptoplanner.com/"/>
+  <!-- Jeśli masz dobre social preview, podmień na konkretny plik np. /assets/og.png (1200x630) -->
+  <meta property="og:image" content="https://mycryptoplanner.com/assets/crypto_planner_core.png"/>
+
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Crypto Portfolio Tracker (No Subscription) — Crypto Planner CORE"/>
+  <meta name="twitter:description" content="Track spot + staking in Google Sheets. Real PnL. One-time purchase. No subscription."/>
+  <meta name="twitter:image" content="https://mycryptoplanner.com/assets/crypto_planner_core.png"/>
 
   <!-- FAVICON (production-ready setup) -->
   <link rel="icon" href="/favicon.ico" sizes="any">
@@ -21,6 +40,72 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="styles.css">
+
+  <!-- STRUCTURED DATA (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://mycryptoplanner.com/#organization",
+        "name": "CoreSystems",
+        "url": "https://mycryptoplanner.com/",
+        "logo": "https://mycryptoplanner.com/assets/coresystems.png"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://mycryptoplanner.com/#website",
+        "url": "https://mycryptoplanner.com/",
+        "name": "Crypto Planner",
+        "publisher": { "@id": "https://mycryptoplanner.com/#organization" }
+      },
+      {
+        "@type": "Product",
+        "@id": "https://mycryptoplanner.com/#product-core",
+        "name": "Crypto Planner CORE v1.0",
+        "description": "Google Sheets crypto portfolio tracker with spot + staking tracking, real PnL and price updater with manual fallback. One-time purchase. No subscription.",
+        "brand": { "@type": "Brand", "name": "Crypto Planner" },
+        "image": [
+          "https://mycryptoplanner.com/assets/crypto_planner_core.png"
+        ],
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "USD",
+          "price": "29",
+          "availability": "https://schema.org/InStock",
+          "url": "https://mycryptoplanner.com/#pricing"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://mycryptoplanner.com/#faqpage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Do I need to enter prices manually?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. Prices update automatically via the updater. Manual price is only a fallback if a symbol is missing or an API hiccup happens." }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I add new coins/assets myself?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. The template is designed to be self-extendable: add an asset, enable it, then run price update." }
+          },
+          {
+            "@type": "Question",
+            "name": "Is this a subscription?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. One-time purchase. Make your own copy in Google Sheets and use it forever." }
+          },
+          {
+            "@type": "Question",
+            "name": "Does it support multiple portfolios?",
+            "acceptedAnswer": { "@type": "Answer", "text": "CORE v1.0 is designed for a single portfolio (fast + simple). Multi-portfolio is planned for future versions." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
@@ -50,6 +135,11 @@
 </header>
 
 <section class="hero" id="top">
+  <!-- Hidden H1: helps SEO, does NOT change layout -->
+  <h1 style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">
+    Crypto Portfolio Tracker (No Subscription) — Crypto Planner CORE in Google Sheets
+  </h1>
+
   <div class="container">
     <div class="hero-gap">
       <img class="hero-logo" src="assets/coresystems.png" alt="CoreSystems logo">
@@ -369,6 +459,57 @@
   </div>
 </section>
 
+<!-- SEO EDUCATION BLOCK (adds content without touching your current UX) -->
+<section class="section" id="learn">
+  <div class="container reveal">
+    <h2 class="h2">Learn: crypto portfolio tracking (simple & reliable)</h2>
+    <p class="p">If you’ve tried multiple apps and still feel like your numbers don’t match — this section explains the “why” and how to fix it with a transparent spreadsheet workflow.</p>
+
+    <div class="why-grid">
+      <div class="why-card boxframe">
+        <h3>What is a crypto portfolio tracker?</h3>
+        <p>A portfolio tracker is a tool that aggregates your holdings, cost basis and performance across assets. The key is correctness: a tracker must treat deposits, buys, sells and fees consistently.</p>
+      </div>
+
+      <div class="why-card boxframe">
+        <h3>Why Google Sheets instead of an app?</h3>
+        <p>Sheets gives you ownership and auditability. You can see the inputs, formulas and logic, and you keep access even if a SaaS changes pricing or removes features.</p>
+      </div>
+
+      <div class="why-card boxframe">
+        <h3>No subscription vs subscription</h3>
+        <p>Subscription apps often optimize for recurring revenue. A one-time template is a tool you own — ideal if you value stability and long-term control.</p>
+      </div>
+    </div>
+
+    <div class="pricing-grid" style="margin-top:18px;">
+      <div class="pricebox boxframe">
+        <h3>Common tracking mistakes (and fixes)</h3>
+        <ul class="ul">
+          <li><b>Wrong cost basis</b> → use consistent logic (FIFO / average) and include fees.</li>
+          <li><b>Prices missing</b> → use auto price updater + manual fallback only when needed.</li>
+          <li><b>Inputs mixed with formulas</b> → separate “edit” sheets from “auto” calculations.</li>
+          <li><b>Staking confusion</b> → track staking separately, then sum into totals.</li>
+        </ul>
+        <div class="hr"></div>
+        <p class="p" style="margin:0;">Want the clean version ready to use? <a href="#pricing">See CORE pricing</a>.</p>
+      </div>
+
+      <div class="pricebox boxframe">
+        <h3>CoinStats alternative: when it makes sense</h3>
+        <ul class="ul">
+          <li>You want <b>one-time purchase</b> (no subscription).</li>
+          <li>You want <b>transparent calculations</b> (audit-friendly).</li>
+          <li>You prefer <b>Google Drive ownership</b> over SaaS accounts.</li>
+          <li>You want a workflow built for <b>clarity</b>, not feature overload.</li>
+        </ul>
+        <div class="hr"></div>
+        <p class="p" style="margin:0;">If this matches your needs, <a href="#contact">ask a question</a> or <a href="#pricing">get CORE</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT (Netlify Forms + email backup) -->
 <section class="section" id="contact">
   <div class="container reveal">
@@ -380,7 +521,6 @@
         <h3>Send a message</h3>
         <p>We reply typically within 1–2 business days.</p>
 
-        <!-- Netlify Forms -->
         <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thanks/" class="contact-form">
           <input type="hidden" name="form-name" value="contact">
           <p class="hidden">
@@ -408,11 +548,12 @@
         <p>If the form doesn’t work, email us directly:</p>
 
         <div class="contact-actions">
-          <a class="btn btn-ghost" href="mailto:support@coresystems.example">support@coresystems.example</a>
+          <!-- TODO: podmień na swój Gmail na teraz -->
+          <a class="btn btn-ghost" href="mailto:mycryptoplanner@gmail.com">mycryptoplanner@gmail.com</a>
         </div>
 
         <div class="contact-note">
-          Replace the email above with your real support address.
+          You can add a professional email later (e.g. support@mycryptoplanner.com).
         </div>
       </div>
     </div>
