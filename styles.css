@@ -28,6 +28,14 @@
   /* Pricing accent */
   --priceBorder: rgba(22,163,74,0.26);
   --priceGlow: rgba(22,163,74,0.14);
+
+  /* Link colors (sitewide) */
+  --link: #1fa2ff;
+  --linkHover: #38cfff;
+
+  /* “neutral” link (for top nav / contact-like) */
+  --linkNeutral: #475569;
+  --linkNeutralHover: #0b1f3a;
 }
 
 *{box-sizing:border-box}
@@ -44,6 +52,26 @@ body.no-scroll{overflow:hidden;}
 .section{padding:64px 0;}
 .section-tight{padding:44px 0;}
 
+/* ===== GLOBAL LINKS — PREMIUM NAVY VERSION ===== */
+
+a{
+  color: var(--navy);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color .2s ease, opacity .2s ease;
+}
+
+a:visited{
+  color: var(--navy);
+}
+
+a:hover{
+  color: #081a31;           /* lekko ciemniejszy navy */
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
 /* topbar */
 .topbar{
   position:sticky; top:0; z-index:60;
@@ -57,26 +85,37 @@ body.no-scroll{overflow:hidden;}
 }
 .brand{display:flex; align-items:center; gap:12px; text-decoration:none;}
 .brand img{height:56px; width:auto;}
+
 .nav{display:flex; gap:26px; font-weight:750;}
-.nav a{
-  color:#475569;
+/* TOP MENU FINAL — dark like Contact, NO BLUE */
+.topbar .nav a{
+  color: var(--linkNeutral);
+  font-size:14px;
+  font-weight:600;
+  letter-spacing:0.3px;
   text-decoration:none;
   position:relative;
   padding:6px 0;
   opacity:.95;
 }
-.nav a:hover{opacity:1}
-.nav a::after{
+.topbar .nav a:visited{ color: var(--linkNeutral); }
+.topbar .nav a:hover{
+  color: var(--linkNeutralHover);
+  opacity:1;
+  text-decoration:none;
+}
+.topbar .nav a::after{
   content:"";
   position:absolute;
   left:0; bottom:-6px;
   width:0%;
   height:2px;
-  background:rgba(71,85,105,0.95);
+  background: var(--linkNeutralHover);
   border-radius:2px;
   transition:width .18s ease;
 }
-.nav a:hover::after{width:100%}
+.topbar .nav a:hover::after{width:100%}
+
 .top-ctas{display:flex; gap:10px; align-items:center;}
 
 /* buttons */
@@ -94,7 +133,8 @@ body.no-scroll{overflow:hidden;}
 .btn:hover{transform: translateY(-1px); box-shadow: 0 10px 24px rgba(15,23,42,0.10);}
 .btn-primary{background:var(--navy); color:#fff; border-color:transparent;}
 .btn-primary:hover{background:#081a31;}
-.btn-ghost{background:#fff; color:var(--navy);}
+.btn-ghost{background:#fff; color:var(--navy); text-decoration:none;}
+.btn-ghost:hover{text-decoration:none;}
 
 .btn-etsy{
   background: linear-gradient(90deg,#f97316,#ea580c);
@@ -667,7 +707,8 @@ body.no-scroll{overflow:hidden;}
   padding:6px 0;
   font-weight:750;
 }
-.footer a:hover{opacity:1}
+.footer a:visited{ color:#475569; }
+.footer a:hover{opacity:1; color:#0b1f3a; text-decoration:none;}
 .footer a::after{
   content:"";
   position:absolute;
@@ -790,35 +831,40 @@ body.no-scroll{overflow:hidden;}
   .gallery-nav{width:38px;height:38px;font-size:28px;border-radius:12px;}
   #galleryImg{max-height: 60vh;}
 }
-/* === Brand link styling (override default purple) === */
+/* ===== TOP BAR FINAL COLORS ===== */
 
-a {
-  color: #1fa2ff;
-  text-decoration: none;
-  transition: color .2s ease;
+/* MENU LINKS */
+.topbar .nav a {
+  color: #0b1f3a !important;   /* granat */
+  font-weight: 600;
 }
 
-a:hover {
-  color: #38cfff;
-  text-decoration: underline;
+.topbar .nav a:visited {
+  color: #0b1f3a !important;
 }
 
-.footer a {
-  color: #9bb3c9;
+.topbar .nav a:hover {
+  color: #071628 !important;   /* ciemniejszy granat */
 }
 
-.footer a:hover {
-  color: #ffffff;
+/* VIEW PRICING BUTTON (ghost) */
+.topbar .btn-ghost {
+  color: #0b1f3a !important;   /* granatowy tekst */
+  border-color: rgba(11,31,58,0.25);
+  background: #ffffff;
 }
 
-.contact-note a,
-.p a,
-.disclaimer a {
-  color: #1fa2ff;
+.topbar .btn-ghost:hover {
+  background: #f1f5f9;
+  color: #071628 !important;
 }
 
-.contact-note a:hover,
-.p a:hover,
-.disclaimer a:hover {
-  color: #38cfff;
+/* GET CORE BUTTON */
+.topbar .btn-primary {
+  color: #ffffff !important;   /* biały tekst */
+  background: #0b1f3a;
+}
+
+.topbar .btn-primary:hover {
+  background: #071628;
 }
