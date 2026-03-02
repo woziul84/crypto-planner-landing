@@ -1014,3 +1014,7 @@ a:hover{
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+/* ===== Reveal compatibility patch (paste at very end) ===== */
+.reveal{ opacity:0; transform: translateY(10px); transition: opacity .5s ease, transform .5s ease; }
+.reveal.is-in,
+.reveal.show{ opacity:1; transform: translateY(0); }
