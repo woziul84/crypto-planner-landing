@@ -40,14 +40,19 @@
   <!-- CSS -->
   <link rel="stylesheet" href="styles.css">
 
-  <!-- FIX: remove default purple links (brand-consistent) -->
+  <!-- LINK COLOR OVERRIDE (brand-consistent, NO BLUE on hover/visited) -->
   <style>
-    a { color:#1fa2ff; text-decoration:none; transition: color .2s ease, text-decoration .2s ease; }
-    a:hover { color:#38cfff; text-decoration:underline; }
-    a:visited { color:#1fa2ff; }
-    .footer a { color:#9bb3c9; }
-    .footer a:hover { color:#ffffff; }
+    /* This intentionally overrides browser defaults and any accidental inline styles.
+       Keep links NAVY everywhere, especially Guides & Learn. */
+    a { color: var(--navy); text-decoration:none; transition: color .2s ease, text-decoration .2s ease; }
+    a:hover { color: var(--navy); text-decoration:underline; }
+    a:visited { color: var(--navy); }
+    a:active, a:focus { color: var(--navy); }
+
+    /* Buttons shouldn't show underline */
     .btn { text-decoration:none !important; }
+
+    /* Footer can keep its own styling from styles.css (do NOT force blue here) */
   </style>
 
   <!-- STRUCTURED DATA (JSON-LD) -->
