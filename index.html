@@ -16,9 +16,8 @@
   <meta property="og:type" content="website"/>
   <meta property="og:site_name" content="Crypto Planner"/>
   <meta property="og:title" content="Crypto Portfolio Tracker (No Subscription) — Crypto Planner CORE"/>
-  <meta property="og:description" content="A clean Google Sheets crypto portfolio tracker: spot + staking, real PnL, price updater + manual fallback. One-time purchase."/>
+  <meta property="og:description" content="A clean Google Sheets crypto portfolio tracker: spot + staking, real PnL, price updater with manual fallback. One-time purchase."/>
   <meta property="og:url" content="https://mycryptoplanner.com/"/>
-  <!-- Jeśli masz dobre social preview, podmień na konkretny plik np. /assets/og.png (1200x630) -->
   <meta property="og:image" content="https://mycryptoplanner.com/assets/crypto_planner_core.png"/>
 
   <meta name="twitter:card" content="summary_large_image"/>
@@ -40,6 +39,16 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="styles.css">
+
+  <!-- FIX: remove default purple links (brand-consistent) -->
+  <style>
+    a { color:#1fa2ff; text-decoration:none; transition: color .2s ease, text-decoration .2s ease; }
+    a:hover { color:#38cfff; text-decoration:underline; }
+    a:visited { color:#1fa2ff; }
+    .footer a { color:#9bb3c9; }
+    .footer a:hover { color:#ffffff; }
+    .btn { text-decoration:none !important; }
+  </style>
 
   <!-- STRUCTURED DATA (JSON-LD) -->
   <script type="application/ld+json">
@@ -123,6 +132,7 @@
       <a href="#screens">Screenshots</a>
       <a href="#why">Why not</a>
       <a href="#where">Where to buy</a>
+      <a href="#guides">Guides</a>
       <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -410,6 +420,40 @@
   </div>
 </section>
 
+<!-- ✅ NEW: SEO HUB (internal linking from homepage) -->
+<section class="section-tight" id="guides">
+  <div class="container reveal">
+    <h2 class="h2">Guides & Comparisons</h2>
+    <p class="p">Deep comparison articles + practical tracking guides.</p>
+
+    <div class="pricing-grid">
+      <div class="pricebox boxframe">
+        <h3>Best Crypto Portfolio Tracker (2026)</h3>
+        <p class="p">Pillar guide: apps vs exchanges vs Sheets.</p>
+        <a class="btn btn-ghost" href="/best-crypto-portfolio-tracker/">Read guide →</a>
+      </div>
+
+      <div class="pricebox boxframe">
+        <h3>CoinStats Alternative</h3>
+        <p class="p">When spreadsheet systems win.</p>
+        <a class="btn btn-ghost" href="/coinstats-alternative/">Explore →</a>
+      </div>
+
+      <div class="pricebox boxframe">
+        <h3>Google Sheets Crypto Tracker</h3>
+        <p class="p">How the workflow stays stable.</p>
+        <a class="btn btn-ghost" href="/google-sheets-crypto-tracker/">Learn more →</a>
+      </div>
+
+      <div class="pricebox boxframe">
+        <h3>Track Crypto Staking</h3>
+        <p class="p">Spot + staking separation explained.</p>
+        <a class="btn btn-ghost" href="/track-staking/">Read article →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section-tight" id="faq">
   <div class="container reveal">
     <h2 class="h2">FAQ</h2>
@@ -459,11 +503,17 @@
   </div>
 </section>
 
-<!-- SEO EDUCATION BLOCK (adds content without touching your current UX) -->
-<section class="section" id="learn">
+<!-- SEO EDUCATION BLOCK (renamed id to avoid duplicate) -->
+<section class="section" id="learn-more">
   <div class="container reveal">
     <h2 class="h2">Learn: crypto portfolio tracking (simple & reliable)</h2>
-    <p class="p">If you’ve tried multiple apps and still feel like your numbers don’t match — this section explains the “why” and how to fix it with a transparent spreadsheet workflow.</p>
+
+    <p class="p">
+      If you’ve tried multiple apps and still feel like your numbers don’t match — this section explains the “why”
+      and how to fix it with a transparent spreadsheet workflow.
+      For a full tool comparison, read the
+      <a href="/best-crypto-portfolio-tracker/">Best Crypto Portfolio Tracker guide</a>.
+    </p>
 
     <div class="why-grid">
       <div class="why-card boxframe">
@@ -548,7 +598,6 @@
         <p>If the form doesn’t work, email us directly:</p>
 
         <div class="contact-actions">
-          <!-- TODO: podmień na swój Gmail na teraz -->
           <a class="btn btn-ghost" href="mailto:mycryptoplanner@gmail.com">mycryptoplanner@gmail.com</a>
         </div>
 
@@ -573,6 +622,7 @@
       <a href="#screens">Screenshots</a>
       <a href="#why">Why not</a>
       <a href="#where">Where to buy</a>
+      <a href="#guides">Guides</a>
       <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
     </div>
