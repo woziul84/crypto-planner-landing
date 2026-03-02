@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  <title>Best CoinStats Alternative (No Subscription) — Crypto Planner</title>
+  <meta name="description" content="Looking for a CoinStats alternative without subscriptions? Crypto Planner is a clean Google Sheets tracker with spot + staking, price updates and a stable workflow."/>
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png">
+  <meta name="theme-color" content="#0b1f3a">
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a class="brand" href="/" aria-label="Home">
+      <img src="../assets/coresystems.png" alt="CoreSystems logo">
+    </a>
+
+    <nav class="nav" aria-label="Main navigation">
+      <a href="/#products">Products</a>
+      <a href="/#compare">Compare</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/#screens">Screenshots</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+
+    <div class="top-ctas">
+      <a class="btn btn-ghost" href="/#pricing">View pricing</a>
+      <a class="btn btn-primary" href="/#pricing">Get CORE</a>
+    </div>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container reveal">
+    <h1 class="h2" style="font-size:42px;">CoinStats alternative (without subscription)</h1>
+    <p class="p" style="max-width:900px;">
+      If you want clarity, ownership, and a workflow you can audit — Crypto Planner CORE is built as a Google Sheets template,
+      with spot + staking tracking, automatic price updates, and protected calculations.
+    </p>
+
+    <div class="pricing-grid" style="margin-top:22px;">
+      <div class="pricebox boxframe">
+        <h3>What people dislike about CoinStats</h3>
+        <ul class="ul">
+          <li>Subscription upgrades over time</li>
+          <li>Limited transparency (black-box calculations)</li>
+          <li>Workflow depends on a SaaS account</li>
+        </ul>
+      </div>
+
+      <div class="pricebox boxframe boxframe-price">
+        <h3>Crypto Planner CORE fixes that</h3>
+        <ul class="ul">
+          <li>One-time purchase (no subscription)</li>
+          <li>Your copy lives in your Google Drive</li>
+          <li>Transparent formulas + stable structure</li>
+          <li>Auto prices + manual fallback</li>
+        </ul>
+
+        <div class="hr"></div>
+
+        <a class="btn btn-primary" href="/#pricing">Buy CORE ($29)</a>
+      </div>
+    </div>
+
+    <div class="boxframe" style="margin-top:22px; padding:18px;">
+      <h3 style="margin-top:0;">Quick comparison</h3>
+      <p class="p" style="margin-bottom:0;">
+        <b>CoinStats</b> = convenient SaaS, but subscription + platform dependency.<br>
+        <b>Crypto Planner</b> = simple Sheets workflow, ownership, and auditability.
+      </p>
+    </div>
+
+    <div style="margin-top:18px;">
+      <a class="btn btn-ghost" href="/">← Back to home</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div style="display:flex; gap:10px; align-items:center;">
+      <img src="../assets/coresystems.png" alt="CoreSystems">
+      <div>© 2026 CoreSystems. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* Reveal on scroll */
+(function(){
+  const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const els = Array.from(document.querySelectorAll('.reveal'));
+  if (prefersReduced){ els.forEach(el => el.classList.add('is-in')); return; }
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('is-in'); io.unobserve(e.target); } });
+  }, {threshold: 0.12});
+  els.forEach(el=>io.observe(el));
+})();
+</script>
+
+</body>
+</html>
