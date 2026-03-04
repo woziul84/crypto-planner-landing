@@ -993,3 +993,30 @@ text-decoration:none;
 .footer-nav a:hover{
 text-decoration:underline;
 }
+/* --- FOOTER NAV FIX: consistent colors + single underline + clean wrap --- */
+
+.footer .footer-links{
+  display:flex;
+  flex-wrap:wrap;              /* 2 rzędy są OK, ale wyglądają jak layout, nie "błąd" */
+  justify-content:center;
+  align-items:center;
+  gap: 10px 22px;              /* pion / poziom — możesz zwiększyć poziom np. do 26px */
+  margin-top: 14px;
+}
+
+.footer .footer-links a,
+.footer .footer-links a:visited{
+  color: var(--navy) !important;
+  text-decoration: none !important;   /* kasuje każdy underline/border z innych reguł */
+  border-bottom: none !important;     /* jeśli gdzieś było border-underline */
+}
+
+.footer .footer-links a:hover,
+.footer .footer-links a:focus{
+  color: var(--navy) !important;
+  text-decoration: underline !important;  /* jedno podkreślenie */
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+/* jeśli gdzieś globalnie dajesz underline dla wszystkich <a>, stopka ma własne reguły powyżej */
