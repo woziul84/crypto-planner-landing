@@ -6,6 +6,7 @@
 
   <title>Google Sheets Crypto Tracker (2026) — Track Crypto Without Subscriptions</title>
   <meta name="description" content="Build a powerful Google Sheets crypto tracker with spot + staking, automatic price updates and clean cost basis. No subscriptions. Full ownership."/>
+  <link rel="canonical" href="https://www.mycryptoplanner.com/google-sheets-crypto-tracker/">
 
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
@@ -13,7 +14,16 @@
   <meta name="theme-color" content="#0b1f3a">
 
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/styles.css?v=20260304a">
+
+  <!-- LINK COLOR OVERRIDE (brand-consistent, NO BLUE on hover/visited) -->
+  <style>
+    a { color: var(--navy); text-decoration:none; transition: color .2s ease, text-decoration .2s ease; }
+    a:hover { color: var(--navy); text-decoration:underline; }
+    a:visited { color: var(--navy); }
+    a:active, a:focus { color: var(--navy); }
+    .btn { text-decoration:none !important; }
+  </style>
 </head>
 
 <body>
@@ -24,17 +34,15 @@
       <img src="/assets/coresystems.png" alt="CoreSystems logo">
     </a>
 
+    <!-- ✅ NAV IDENTICAL TO HOMEPAGE -->
     <nav class="nav" aria-label="Main navigation">
       <a href="/#products">Products</a>
       <a href="/#compare">Compare</a>
       <a href="/#pricing">Pricing</a>
       <a href="/#screens">Screenshots</a>
-
-      <a href="/#why">Why not CoinStats?</a>
+      <a href="/#why">Why not</a>
       <a href="/#where">Where to buy</a>
       <a href="/#guides">Guides</a>
-      <a href="/#learn">Learn</a>
-
       <a href="/#faq">FAQ</a>
       <a href="/#contact">Contact</a>
     </nav>
@@ -187,35 +195,32 @@
 </footer>
 
 <script>
-  // Ensure CSS reveal rules that depend on html.js work consistently
-  document.documentElement.classList.add('js');
+(function(){
+  const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const els = Array.from(document.querySelectorAll('.reveal'));
+  if (!els.length) return;
 
-  (function(){
-    const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const els = Array.from(document.querySelectorAll('.reveal'));
-    if (!els.length) return;
+  if (prefersReduced){
+    els.forEach(el => el.classList.add('is-in'));
+    return;
+  }
 
-    if (prefersReduced){
-      els.forEach(el => el.classList.add('is-in'));
-      return;
-    }
+  if (!('IntersectionObserver' in window)){
+    els.forEach(el => el.classList.add('is-in'));
+    return;
+  }
 
-    if (!('IntersectionObserver' in window)){
-      els.forEach(el => el.classList.add('is-in'));
-      return;
-    }
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add('is-in');
+        io.unobserve(e.target);
+      }
+    });
+  }, {threshold: 0.12});
 
-    const io = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{
-        if(e.isIntersecting){
-          e.target.classList.add('is-in');
-          io.unobserve(e.target);
-        }
-      });
-    }, {threshold: 0.12});
-
-    els.forEach(el=>io.observe(el));
-  })();
+  els.forEach(el=>io.observe(el));
+})();
 </script>
 
 </body>
