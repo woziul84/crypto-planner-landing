@@ -980,8 +980,9 @@ gap:12px;
 .footer-nav{
 display:flex;
 flex-wrap:wrap;
-gap:16px;
+gap:28px;
 font-size:14px;
+line-height:1.9;
 }
 
 .footer-nav a{
