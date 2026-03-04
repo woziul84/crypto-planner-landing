@@ -739,7 +739,7 @@ a:hover{
   flex-wrap:wrap;
   justify-content:center;
   align-items:center;
-  gap: 12px 28px; /* bigger spacing */
+  gap: 16px 40px; /* bigger spacing */
 }
 
 /* kill any underline pseudo-elements from old versions */
