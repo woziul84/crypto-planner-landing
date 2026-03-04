@@ -13,7 +13,7 @@
   <meta name="theme-color" content="#0b1f3a">
 
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="/styles.css">
 </head>
 
 <body>
@@ -21,7 +21,7 @@
 <header class="topbar">
   <div class="container topbar-inner">
     <a class="brand" href="/" aria-label="Home">
-      <img src="../assets/coresystems.png" alt="CoreSystems logo">
+      <img src="/assets/coresystems.png" alt="CoreSystems logo">
     </a>
 
     <nav class="nav" aria-label="Main navigation">
@@ -174,22 +174,42 @@
 <footer class="footer">
   <div class="container footer-inner">
     <div style="display:flex; gap:10px; align-items:center;">
-      <img src="../assets/coresystems.png" alt="CoreSystems">
+      <img src="/assets/coresystems.png" alt="CoreSystems">
       <div>© 2026 CoreSystems. All rights reserved.</div>
     </div>
   </div>
 </footer>
 
 <script>
-(function(){
-  const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const els = Array.from(document.querySelectorAll('.reveal'));
-  if (prefersReduced){ els.forEach(el => el.classList.add('is-in')); return; }
-  const io = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('is-in'); io.unobserve(e.target); } });
-  }, {threshold: 0.12});
-  els.forEach(el=>io.observe(el));
-})();
+  // Ensure CSS reveal rules that depend on html.js work consistently
+  document.documentElement.classList.add('js');
+
+  (function(){
+    const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const els = Array.from(document.querySelectorAll('.reveal'));
+    if (!els.length) return;
+
+    if (prefersReduced){
+      els.forEach(el => el.classList.add('is-in'));
+      return;
+    }
+
+    if (!('IntersectionObserver' in window)){
+      els.forEach(el => el.classList.add('is-in'));
+      return;
+    }
+
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          e.target.classList.add('is-in');
+          io.unobserve(e.target);
+        }
+      });
+    }, {threshold: 0.12});
+
+    els.forEach(el=>io.observe(el));
+  })();
 </script>
 
 </body>
