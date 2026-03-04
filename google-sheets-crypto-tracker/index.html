@@ -14,16 +14,7 @@
   <meta name="theme-color" content="#0b1f3a">
 
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css?v=20260304a">
-
-  <!-- LINK COLOR OVERRIDE (brand-consistent, NO BLUE on hover/visited) -->
-  <style>
-    a { color: var(--navy); text-decoration:none; transition: color .2s ease, text-decoration .2s ease; }
-    a:hover { color: var(--navy); text-decoration:underline; }
-    a:visited { color: var(--navy); }
-    a:active, a:focus { color: var(--navy); }
-    .btn { text-decoration:none !important; }
-  </style>
+  <link rel="stylesheet" href="/styles.css?v=20260304b">
 </head>
 
 <body>
@@ -34,7 +25,6 @@
       <img src="/assets/coresystems.png" alt="CoreSystems logo">
     </a>
 
-    <!-- ✅ NAV IDENTICAL TO HOMEPAGE -->
     <nav class="nav" aria-label="Main navigation">
       <a href="/#products">Products</a>
       <a href="/#compare">Compare</a>
@@ -102,84 +92,39 @@
       <h2 style="margin-top:0;">The 5-Layer Structure of a Proper Crypto Tracker</h2>
 
       <h3>1) TRADES (Input Layer)</h3>
-      <p class="p">
-        Clean transaction log: date, asset, side, quantity, price, fees.
-        This is your source of truth.
-      </p>
+      <p class="p">Clean transaction log: date, asset, side, quantity, price, fees. This is your source of truth.</p>
 
       <h3>2) HOLDINGS (Calculation Layer)</h3>
-      <p class="p">
-        Aggregates trades into total quantity per asset and calculates weighted average cost,
-        value and unrealized PnL.
-      </p>
+      <p class="p">Aggregates trades into totals per asset and calculates weighted average cost, value and unrealized PnL.</p>
 
       <h3>3) STAKING (Separate & Summed)</h3>
-      <p class="p">
-        Staking should be tracked independently and then added to total holdings.
-        Without this separation, performance metrics become distorted.
-      </p>
+      <p class="p">Track staking independently and then add it to totals — otherwise performance metrics get distorted.</p>
 
       <h3>4) PRICES (Auto + Manual Fallback)</h3>
-      <p class="p">
-        A stable system prioritizes automatic prices but allows manual override
-        if the API fails or a token is too niche.
-      </p>
+      <p class="p">Automatic prices first, manual override only when an API fails or a token is too niche.</p>
 
       <h3>5) DASHBOARD (Output Only)</h3>
-      <p class="p">
-        The dashboard should show total value, PnL, allocation, and top holdings.
-        No raw data. No manual edits.
-      </p>
-    </div>
-
-    <div class="boxframe" style="margin-top:22px; padding:22px;">
-      <h2 style="margin-top:0;">How to Pull Crypto Prices into Google Sheets</h2>
-      <p class="p">
-        The most scalable method is using Google Apps Script connected to a public API
-        (like CoinGecko) with caching and cooldown logic. This prevents rate-limit issues
-        and keeps pricing stable across your portfolio.
-      </p>
-    </div>
-
-    <div class="boxframe" style="margin-top:22px; padding:22px;">
-      <h2 style="margin-top:0;">Google Sheets vs Crypto Apps</h2>
-
-      <p class="p">
-        <strong>Apps</strong> optimize for convenience.<br>
-        <strong>Sheets</strong> optimize for control.
-      </p>
-
-      <ul class="ul">
-        <li>Apps require subscriptions.</li>
-        <li>Apps hide calculation logic.</li>
-        <li>Apps depend on platform accounts.</li>
-        <li>Sheets give full transparency and ownership.</li>
-      </ul>
+      <p class="p">Output-only: total value, PnL, allocation, top holdings — no raw edits.</p>
     </div>
 
     <div class="boxframe boxframe-price" style="margin-top:22px; padding:22px;">
-      <h2 style="margin-top:0;">Want the Structured Version Without Building It Yourself?</h2>
+      <h2 style="margin-top:0;">Want the structured version without building it yourself?</h2>
 
       <p class="p">
-        Crypto Planner CORE is a structured Google Sheets crypto tracker
-        built around this exact 5-layer workflow:
+        Crypto Planner CORE is a structured Google Sheets crypto tracker built around this workflow:
       </p>
 
       <ul class="ul">
         <li>Spot + staking tracking</li>
-        <li>Automatic prices with fallback</li>
+        <li>Automatic prices with manual fallback</li>
         <li>Protected calculations</li>
         <li>Clean dashboard</li>
         <li>One-time purchase (no subscription)</li>
       </ul>
 
       <div class="hr"></div>
-
       <a class="btn btn-primary" href="/#pricing">Get CORE ($29)</a>
-    </div>
-
-    <div style="margin-top:18px;">
-      <a class="btn btn-ghost" href="/">← Back to home</a>
+      <a class="btn btn-ghost" href="/" style="margin-left:10px;">← Back to home</a>
     </div>
 
   </div>
@@ -199,26 +144,13 @@
   const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const els = Array.from(document.querySelectorAll('.reveal'));
   if (!els.length) return;
-
-  if (prefersReduced){
+  if (prefersReduced || !('IntersectionObserver' in window)){
     els.forEach(el => el.classList.add('is-in'));
     return;
   }
-
-  if (!('IntersectionObserver' in window)){
-    els.forEach(el => el.classList.add('is-in'));
-    return;
-  }
-
   const io = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{
-      if(e.isIntersecting){
-        e.target.classList.add('is-in');
-        io.unobserve(e.target);
-      }
-    });
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('is-in'); io.unobserve(e.target); } });
   }, {threshold: 0.12});
-
   els.forEach(el=>io.observe(el));
 })();
 </script>
