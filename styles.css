@@ -934,3 +934,32 @@ html.js .reveal.show{
   text-decoration-thickness: 2px;
   text-underline-offset: 3px;
 }
+/* ===== TOPBAR FIT FIX (logo left + menu fits) ===== */
+
+/* make header container wider only in topbar */
+.topbar .container{
+  max-width: 1400px;          /* było 1200 */
+  padding: 0 16px;            /* było 0 20 */
+}
+
+/* slightly smaller vertical padding */
+.topbar-inner{
+  padding: 10px 0;            /* było 14px 0 */
+  gap: 14px;                  /* było 18px */
+}
+
+/* logo smaller -> more room for nav */
+.brand img{
+  height: 46px;               /* było 56px */
+}
+
+/* nav tighter spacing so it doesn't overflow */
+.nav{
+  gap: 18px;                  /* było 26px */
+}
+
+/* make nav labels slightly smaller */
+.topbar .nav a{
+  font-size: 13px;            /* było 14px */
+  padding: 5px 0;
+}
