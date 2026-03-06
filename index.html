@@ -47,6 +47,89 @@
     a:visited { color: var(--navy); }
     a:active, a:focus { color: var(--navy); }
     .btn { text-decoration:none !important; }
+
+    /* CONTACT polish for Typeform embed */
+    .contact-grid{
+      display:grid;
+      grid-template-columns: 1fr 1.35fr;
+      gap:24px;
+      align-items:stretch;
+      margin-top:24px;
+    }
+    .contact-card{
+      height:100%;
+    }
+    .contact-card h3{
+      margin:0 0 12px;
+    }
+    .contact-list{
+      margin:18px 0 0;
+      padding:0;
+      list-style:none;
+      display:grid;
+      gap:10px;
+    }
+    .contact-list li{
+      position:relative;
+      padding-left:18px;
+      color:var(--muted);
+    }
+    .contact-list li::before{
+      content:"•";
+      position:absolute;
+      left:0;
+      top:0;
+      color:var(--green);
+      font-weight:700;
+    }
+    .contact-kicker{
+      display:inline-block;
+      margin-bottom:10px;
+      font-size:12px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:var(--green);
+      font-weight:700;
+    }
+    .contact-note{
+      margin-top:18px;
+      font-size:14px;
+      color:var(--muted);
+    }
+    .contact-embed-wrap{
+      padding:0;
+      overflow:hidden;
+      min-height:640px;
+    }
+    .contact-embed{
+      display:block;
+      width:100%;
+      height:640px;
+      border:none;
+      background:#fff;
+    }
+    .contact-mini-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:20px;
+    }
+    .contact-email{
+      font-size:14px;
+      color:var(--muted);
+      margin-top:18px;
+    }
+    @media (max-width: 980px){
+      .contact-grid{
+        grid-template-columns:1fr;
+      }
+      .contact-embed-wrap{
+        min-height:580px;
+      }
+      .contact-embed{
+        height:580px;
+      }
+    }
   </style>
 
   <!-- STRUCTURED DATA (JSON-LD) -->
@@ -554,30 +637,49 @@
 
 <section id="contact" class="section">
   <div class="container reveal">
+    <h2 class="h2">Contact</h2>
+    <p class="p">Questions about Crypto Planner, purchase, setup or future versions? Send a message.</p>
 
-    <h2>Contact</h2>
-    <p class="section-sub">
-      Questions about Crypto Planner? Send a message.
-    </p>
+    <div class="contact-grid">
+      <div class="contact-card boxframe">
+        <span class="contact-kicker">Direct support</span>
+        <h3>Get in touch</h3>
+        <p class="p" style="margin:0;">
+          Use the contact form for product questions, pre-sale questions, setup issues, feature requests or partnership inquiries.
+        </p>
 
-    <div class="boxframe" style="padding:0; overflow:hidden; margin-top:30px;">
+        <ul class="contact-list">
+          <li>Pre-sale questions about CORE</li>
+          <li>Setup and usage help</li>
+          <li>Feedback for future versions</li>
+          <li>Partnership and business inquiries</li>
+        </ul>
 
-      <iframe
-        src="https://form.typeform.com/to/oVheGZG2"
-        style="width:100%; height:520px; border:none;"
-        loading="lazy"
-        title="Crypto Planner contact form">
-      </iframe>
+        <div class="contact-mini-actions">
+          <a class="btn btn-ghost" href="#pricing">View pricing</a>
+          <a class="btn btn-primary" href="mailto:mycryptoplanner@gmail.com">Email directly</a>
+        </div>
 
+        <div class="contact-note">
+          Prefer email? Write directly to
+          <a href="mailto:mycryptoplanner@gmail.com">mycryptoplanner@gmail.com</a>
+        </div>
+      </div>
+
+      <div class="contact-card boxframe contact-embed-wrap">
+        <iframe
+          class="contact-embed"
+          src="https://form.typeform.com/to/oVheGZG2"
+          loading="lazy"
+          title="Crypto Planner contact form">
+        </iframe>
+      </div>
     </div>
 
-    <p style="margin-top:20px; font-size:14px; opacity:.7;">
-      Or email directly:
-      <a href="mailto:mycryptoplanner@gmail.com">
-        mycryptoplanner@gmail.com
-      </a>
-    </p>
-
+    <div class="contact-email">
+      If the embedded form does not load correctly on your device, email us directly at
+      <a href="mailto:mycryptoplanner@gmail.com">mycryptoplanner@gmail.com</a>.
+    </div>
   </div>
 </section>
 
